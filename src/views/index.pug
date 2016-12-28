@@ -1,0 +1,51 @@
+//-Layout Base
+extends ../templates/base.pug
+
+//-Etiqueta Title
+block title
+	title MAGGI® Arroz por montón
+
+//-Etiqueta Metadescription
+block description
+	meta(name="description", content="MAGGI® Arroz por montón" )
+
+
+block content
+	section.container-fluid
+		div.row
+			h2.text-intro.text-center.
+				Ahora tus empaques de MAGGI<sup>&reg;</sup> <span>podrán convertirse en kilos de arroz roa</span>
+
+			div.col-lg-10.col-md-10.col-sm-12.col-xs-12.col-lg-offset-1.col-md-offset-1
+
+				//Pasos
+				div.pasos
+
+					+image('paso-1.png', '6 envolturas de caldos MAGGI® o 1 empaque de cualquier otro producto MAGGI®')(class="animated bounceIn paso  paso-1")
+					+image('plus.png', 'más')(class="animated bounceIn paso  paso-plus")
+					+image('paso-2.png', '$500')(class="animated bounceIn paso  paso-2")
+					+image('equal.png', 'Igual')(class="animated bounceIn paso  paso-equal")
+					+image('paso-3.png', 'y podrás reclamar 1 kilo de arroz roa')(class="animated bounceIn paso paso-3")
+				///-Pasos
+
+				h2.title.title-cant.
+					¡Son 600.000 <span>kilogramos de arroz!</span>
+
+				h3.title.title-puntos.
+					conoce tu punto <span>de caje más cercano</span>
+
+
+				div.col-lg-8.col-md-8.col-sm-10.col-xs-12.col-lg-offset-2.col-md-offset-2.col-sm-offset-1.text-center
+
+					a.puntos.puntos-maggi(href="#map")
+						+image('puntos-tiendas.png', 'Puntos de canje - Tiendas')(class="img-responsive")
+					a.puntos.puntos-servientrega(href="#" target="_blank")
+						+image('puntos-servientrega.png', 'Puntos de canje Servientrega')(class="img-responsive")
+
+					div#map
+						+image('map-placeholder.jpg', 'Mapa')
+
+
+
+block Scripts
+	//-Acá se ponen js que solo vayan en ésta página

@@ -1,0 +1,113 @@
+#map
+  display none
+  *
+    max-width 100%
+
+.col
+  &-social
+    a
+      display inline-block
+      margin 0 0.5rem
+
+      &:hover
+        transform translateY(-0.5rem) scale(1.05)
+        transform-origin center bottom
+
+.logo
+  height auto
+  max-width 90%
+  width 100%
+
+.pasos
+  // display none
+  margin 1rem auto
+  max-width 100%
+  text-align center
+
+  img
+    height auto
+    max-width 100%
+    // width 100%
+
+
+
+  .paso
+    display inline-block
+    height auto
+    margin-left 0.1rem
+    margin-right @margin-left
+    max-width 18rem
+    vertical-align top
+
+    &-2
+      animation-delay 1.5s
+      margin-top 5rem
+
+    &-3
+      animation-delay 2.5s
+      margin-top 8rem
+
+    &-equal
+      animation-delay 2s
+      margin-top 13rem
+
+    &-plus
+      animation-delay 1s
+      margin-top 7rem
+
+.puntos
+  display inline-block
+  margin 1rem
+  max-width 48.8%
+  vertical-align top
+  img
+    height auto
+    max-width 100%
+    width 100%
+
+
+.text-intro
+  span
+    display block
+
+.ticker
+  height auto
+  left 0
+  max-width 15.7rem
+  position absolute
+  top 0
+
+.title
+  text-align center
+
+  &-cant
+    font-size 5rem
+
+    span
+      font-size 2.7rem
+
+  &-puntos
+    background-color $Rojo
+    border-radius 10rem
+    color #fff
+    line-height 1
+    margin 3rem auto
+    max-width 50.7rem
+    padding 1rem 2rem 1rem 12rem
+    position relative
+    text-align left
+    text-shadow none
+
+    &::before
+      path('pin.png')
+      background-position left center
+      background-repeat no-repeat
+      content ''
+      height 10.8rem
+      left -2%
+      position absolute
+      top -20%
+      width 8.5rem
+
+    span
+      display block

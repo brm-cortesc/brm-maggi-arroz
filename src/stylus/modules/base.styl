@@ -1,0 +1,43 @@
+::selection /* WebKit/Blink Browsers */
+	background $Rojo
+	color $Amarillo
+	text-shadow 0px 0px 5px rgba($Amarillo, .75)
+
+::-moz-selection /* Gecko Browsers */
+	background $Rojo
+	color $Amarillo
+	text-shadow 0px 0px 5px rgba($Amarillo, .75)
+
+::-webkit-file-upload-button
+	cursor pointer
+
+a
+	text-decoration none
+	transitionBase(0.3s)
+
+	&:hover
+		text-decoration underline
+
+	img
+		border 0
+		text-decoration none
+
+body
+	background-color $Amarillo
+	background-image url('../images/curve.png'), url('../images/bg-gallina.jpg')
+	background-position top center, top center
+	background-repeat no-repeat no-repeat
+	background-size 100%, 100%
+	color $Azul
+	font-size 1.4rem
+
+
+h1, h2, h3
+	color $Azul
+	font-family $FontStack
+	font-weight $Bold
+	line-height 1
+	text-shadow 0px 2px 0 white,
+							0px 2px 0 white,
+							0px 4px 5px rgba(0,0,0,0.25)
+	text-transform uppercase

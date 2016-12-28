@@ -1,0 +1,21 @@
+//Footer
+footer.container-fluid
+	div.row
+		p.col-lg-12.text-center
+			a(href="") Términos y Condiciones
+			span | 
+			a(href="https://www.maggi.com.co/" target="_blank") Ir a maggi.com.co
+
+
+///-Footer
+
+//Scripts
+//-Estos son los scripts que van en todos los htmls del desarrollo
+if debug == true
+	script(src='js/libs/jquery.js')
+	script(src='js/libs/bootstrap.min.js')
+	//- script(src='js/frontend-brm.js')
+
+else
+	script(src='js/libs.min.js')
+	script(src='js/frontend-brm.js')
