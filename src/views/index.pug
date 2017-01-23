@@ -42,10 +42,33 @@ block content
 					a.puntos.puntos-servientrega(href="#" target="_blank")
 						+image('puntos-servientrega.png', 'Puntos de canje Servientrega')(class="img-responsive")
 
+
+					div.mapa
+
+					form#search
+						div.form-group
+							label(for="dir") Escribe un lugar...
+							input.form-control(type="text", id="dir", name="dir")
+							button.btn.btn-search
+								i.glyphicon.glyphicon-search
+
 					div#map
 						+image('map-placeholder.jpg', 'Mapa')
 
 
 
 block Scripts
+	script.
+		/*estado activo de los inputs */
+		$('input.form-control').focusin(function() {
+		$(this).parent().addClass('active');
+		}).focusout(function() {
+		var self;
+		self = $(this);
+		if ($(this).val() !== '') {
+		self.parent().addClass('active');
+		} else {
+		self.parent().removeClass('active');
+		}
+		});
 	//-Acá se ponen js que solo vayan en ésta página

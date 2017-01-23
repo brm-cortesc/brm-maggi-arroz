@@ -47,6 +47,14 @@
           
         </h3>
         <div class="col-lg-8 col-md-8 col-sm-10 col-xs-12 col-lg-offset-2 col-md-offset-2 col-sm-offset-1 text-center"><a class="puntos puntos-maggi" href="#map"><img class="img-responsive" src="images/puntos-tiendas.png" title="Puntos de canje - Tiendas" alt="Puntos de canje - Tiendas"/></a><a class="puntos puntos-servientrega" href="#" target="_blank"><img class="img-responsive" src="images/puntos-servientrega.png" title="Puntos de canje Servientrega" alt="Puntos de canje Servientrega"/></a>
+          <div class="mapa"></div>
+          <form id="search">
+            <div class="form-group">
+              <label for="dir">Escribe un lugar...</label>
+              <input class="form-control" type="text" id="dir" name="dir">
+              <button class="btn btn-search"><i class="glyphicon glyphicon-search"></i></button>
+            </div>
+          </form>
           <div id="map"><img src="images/map-placeholder.jpg" title="Mapa" alt="Mapa"/>
           </div>
         </div>
@@ -62,4 +70,18 @@
   <!--/-Footer-->
   <!--Scripts-->
   <script src="js/libs.min.js"></script>
+  <script>
+    /*estado activo de los inputs */
+    $('input.form-control').focusin(function() {
+    $(this).parent().addClass('active');
+    }).focusout(function() {
+    var self;
+    self = $(this);
+    if ($(this).val() !== '') {
+    self.parent().addClass('active');
+    } else {
+    self.parent().removeClass('active');
+    }
+    });
+  </script>
 </body></html>
